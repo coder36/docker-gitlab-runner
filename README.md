@@ -10,12 +10,12 @@ A Docker image with:
 
 Built for testing ruby / cucumber / selenium and node server apps.
 
-# Building
+### Building
 ```
 docker build -t chrome
 ```
 
-# Deploying to docker hub
+### Deploying to docker hub
 
 ```
 docker tag chrome coder36/chrome
@@ -23,14 +23,14 @@ docker push coder36/chrome
 ```
 
 
-# Pulling from docker  - (https://hub.docker.com/r/coder36/chrome)[https://hub.docker.com/r/coder36/chrome]
+### Pulling from docker  - [https://hub.docker.com/r/coder36/chrome](https://hub.docker.com/r/coder36/chrome)
 ```
 docker rub -t -i coder36/chrome
 
 ```
 
 
-# Example `.gitlab-ci.yml`
+### Example `.gitlab-ci.yml`
 ```
 image: "coder36/chrome"
 
