@@ -57,4 +57,15 @@ ADD google-chrome-launcher /usr/bin/google-chrome
 RUN chmod a+x /usr/bin/google-chrome
 
 run 	apt-get install -y python python-pip
+run 	apt-get install -y lsb-release apt-transport-https
+
+run     export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)"
+run     echo "deb https://packages.cloud.google.com/apt cloud-sdk-xenial main" > /etc/apt/sources.list.d/google-cloud-sdk.list
+run     curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
+run     apt-get update
+run     apt-get install -y google-cloud-sdk google-cloud-sdk-app-engine-python
+
+run     pip install virtualenv
+run     virtualenv venv
+run     ln -s /venv /root/venv
 ENTRYPOINT /bin/bash -l
