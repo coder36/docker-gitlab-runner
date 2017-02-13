@@ -12,7 +12,7 @@ Built for testing ruby / cucumber / selenium and node server apps.
 
 ### Building
 ```
-docker build -t chrome
+docker build -t chrome .
 ```
 
 ### Deploying to docker hub
@@ -25,7 +25,7 @@ docker push coder36/chrome
 
 ### Pulling from docker  - [https://hub.docker.com/r/coder36/chrome](https://hub.docker.com/r/coder36/chrome)
 ```
-docker rub -t -i coder36/chrome
+docker run -t -i coder36/chrome
 
 ```
 
