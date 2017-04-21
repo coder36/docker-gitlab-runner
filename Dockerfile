@@ -68,4 +68,5 @@ run     apt-get install -y google-cloud-sdk google-cloud-sdk-app-engine-python
 run     pip install virtualenv
 run     virtualenv venv
 run     ln -s /venv /root/venv
+run     echo "done"
 ENTRYPOINT /bin/bash -l
